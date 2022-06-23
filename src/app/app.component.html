@@ -1,0 +1,43 @@
+
+
+<div class="content" role="main">
+  <p>
+    A "toast" is a popup that only stays for a short amount of time.  It has the advantage that the user doesn't have to click anything to acknowledge it, so it's much more workflow friendly than a modal popup that blocks the user from doing anything else until they acknowledge it.
+  </p>
+  <p>Traditionally toasts are shown in a corner of the screen so they're visible but not obnoxiously obtrusive.</p>
+  <p><b>Tip: Don't use toasts for long messages or lists of errors</b>  where it will take time for the user to read and acknowledge.  Toasts should be short and sweet!</p>
+
+  <p>Click each button below to see a different kind of toast.  With preventDuplicates set to true in the app.module.ts, you will only see one of each toast with the same message at a time, so click-spamming won't result in additional toast.  The two warning toasts here have different messages, so they can both come up at the same time.</p>
+  <p>
+  This toast is used to show success:<br>
+<button (click)="yay()" class="btn btn-yay">
+    Do something!
+</button>&nbsp;
+</p>
+<p>
+  This toast is used to show that a request failed:<br>
+<button (click)="boo()" class="btn btn-err">
+    Do something!
+</button>&nbsp;
+</p>
+<p>
+  This toast is used to show information:<br>
+<button (click)="info()" class="btn btn-inf">
+  Tell me something!
+</button>&nbsp;
+</p><p>
+  This toast is used to show a warning:<br>
+<button (click)="warning('Erm...')" class="btn btn-warn">
+  Do something!
+</button>&nbsp;
+</p>
+
+<p>
+  This toast has a different warning (so you can see how the global preventDuplicates=true setting works):<br>
+<button (click)="warning('Warning!')" class="btn btn-warn">
+  I am different!
+</button>&nbsp;
+</p>
+</div>
+
+<router-outlet></router-outlet>
