@@ -1,4 +1,5 @@
 
 export const environment = {
-  production: false
+  production: false,
+  base_href: "http://localhost:4000/"
 };
